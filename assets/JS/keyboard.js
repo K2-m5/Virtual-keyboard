@@ -116,3 +116,16 @@ let keys = document.querySelectorAll('.key'),
 keys.forEach((el,i) => {
     el.classList.add(codes[i]);
 });
+
+
+document.addEventListener('keydown', function(event) {
+    console.log(event);
+    document.querySelector('.' + event.code + '').classList.add('active');
+   
+    document.onkeyup = () => {
+        keys.forEach(element => {
+            element.classList.remove('active');
+        });
+
+    };
+});

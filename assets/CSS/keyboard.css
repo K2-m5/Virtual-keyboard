@@ -95,3 +95,7 @@ span {
     width: 330px;
 }
 
+.active {
+    border-radius: 10px;
+    background-color: #3b752cbd;
+}
